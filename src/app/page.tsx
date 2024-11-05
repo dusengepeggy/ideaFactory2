@@ -47,13 +47,13 @@ export default function Home() {
 
   ]
   return (
-    <div className='w-full min-h-[100vh] bg-slate-50 text-black'>
+    <div className='w-full min-h-[100vh] bg-slate-50 text-gray-950 '>
 
       <div className="flex h-[100vh] px-10 bg-[url('../../public/freepik__expand__96022.png')] bg-cover ">
-        <div className="w-[50%] h-[100%] flex flex-col justify-center text-center ">
+        <div className="w-[50%] h-[100%] flex flex-col justify-center text-end ">
           <p className="text-[95px] font-bold text-[#001446]">Idea factory</p>
           <p className="text-[#D55571] text-[25px] pl-[120px]">Young minds empowering changes</p>
-          <p className=" text-[17px] px-10 self-start pt-4 pl-[40px]">Our <span className="font-extrabold">Mission</span> is to empower young people by fostering growth and success through initiatives that spark creativity, inspire innovation, and help reduce unemployment. We are dedicated to equipping young minds with the skills, tools, and opportunities they need to prosper and build a secure future. Join us in creating a world where every young person has the chance to thrive and make a meaningful impact.</p>
+          <p className=" text-[17px] text-gray-950 self-start pt-4 pl-[40px]">Our <span className="font-extrabold">Mission</span> is to empower young people by fostering growth and success through initiatives that spark creativity, inspire innovation, and help reduce unemployment. We are dedicated to equipping young minds with the skills, tools, and opportunities they need to prosper and build a secure future. Join us in creating a world where every young person has the chance to thrive and make a meaningful impact.</p>
         </div>
         <div className="w-[50%] h-[100%]  overflow-hidden object-cover flex align-middle justify-center pt-[50px]">
           <Image alt="logo" src={pic} />
@@ -123,15 +123,15 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="min-h-[86.7vh] pt-[100px] px-10 bg-[url('../../public/freepik__expand__96022.png')] bg-cover ">
-            <div className="my-4" id="Contact">
+      <div className="min-h-[100vh] pt-[100px] px-10 bg-[url('../../public/freepik__expand__96022.png')] bg-cover ">
+            <div className="my-8" id="Contact">
                 <div className="text-center mx-auto mb-8 max-w-[510px]">
                     <h2 className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl ">
                         Reach out to US
                     </h2>
                 </div>
                 <div
-                    className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto my-5 max-w-4x bg-transparent backdrop-blur-sm w-[70%] shadow-md rounded-md  rounded-md text-[#333] font-[sans-serif]">
+                    className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto my-5 max-w-4x bg-transparent backdrop-blur-sm w-[70%] shadow-md rounded-md text-[#333] font-[sans-serif]">
                     <div>
                         <h1 className="text-3xl text-[#001446] font-extrabold">CONTACT US</h1>
                         <p className="text-sm text-[#D55571] mt-3">Have some big idea or brand to develop and need help? Then reach
@@ -154,7 +154,7 @@ export default function Home() {
                                     </div>
                                     <a target="blank" href="#" className="text-[#000000] text-sm ml-3">
                                         <small className="block">Phone</small>
-                                        <strong>+250 778 244 211 </strong>
+                                        <strong >+250 778 244 211 </strong>
                                     </a>
                                 </li>
                             </ul>
@@ -171,7 +171,7 @@ export default function Home() {
                 <textarea placeholder='Message' rows={6} id="text"
                     className="w-full rounded-md px-4 border text-sm pt-2.5 outline-[#000000]"></textarea>
                 <input type='submit' value="SEND"
-                    className="text-white bg-[#000000] hover:bg-white hover:text-black font-semibold rounded-md text-sm px-4 py-2.5 w-full"/>
+                    className="text-white bg-[rgb(11,23,53)] hover:bg-white hover:text-black font-semibold rounded-md text-sm px-4 py-2.5 w-full"/>
             </form>
                 </div>
                 
