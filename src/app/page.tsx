@@ -143,10 +143,10 @@ export default function Home() {
                                     <div className="bg-[#ffffffcf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                                         <FiMail/>
                                     </div>
-                                    <a target="blank" href="#" className="text-[#000000] text-sm ml-3">
+                                    <div className="text-[#000000] text-sm ml-3">
                                         <small className="block">Mail</small>
                                         <strong>ideafactory@gmail.com</strong>
-                                    </a>
+                                    </div>
                                 </li>
                                 <li className="flex items-center mb-3">
                                     <div className="bg-[#ffffffcf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">

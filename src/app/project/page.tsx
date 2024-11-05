@@ -53,7 +53,7 @@ function Projects() {
                                 <h2 className="text-2xl font-bold mb-4">{service.name}</h2>
                                 <ul className="space-y-3 text-sm pl-5">
                                     {Object.entries(service.features).map(([key, feature], i) => (
-                                        <li key={i} className="flex items-start">
+                                        <li key={key} className="flex items-start">
                                             <span className="text-[#001446] mr-3">•</span>
                                             <p>{feature}</p>
                                         </li>

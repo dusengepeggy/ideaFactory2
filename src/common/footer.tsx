@@ -7,9 +7,9 @@ export default function Footer() {
     <p>&copy; 2024 Idea factory. All rights reserved.</p>
     <div className="flex gap-4 self-center">     
       
-      <a href="" className='self-center'><FiYoutube size={22} /></a>
-      <a href="" className='self-center'><FiMail size={20} /></a>
-      <a href="" className='self-center'><FiInstagram size={18} /></a>
+      <a href="#" className='self-center'><FiYoutube size={22} /></a>
+      <a href="#" className='self-center'><FiMail size={20} /></a>
+      <a href="#" className='self-center'><FiInstagram size={18} /></a>
 
     </div>
   </footer>
