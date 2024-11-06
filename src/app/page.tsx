@@ -76,7 +76,14 @@ export default function Home() {
                     OUR PROBLEM
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  In 2024, the National Institute of Statistics of Rwanda (NISR) reported that youth unemployment is at 16.8%. This high number shows how hard it is for young people to find work. The main reasons are a lack of job opportunities and a gap between the skills young people have and what employers need. Many youths are either working in low-paying jobs or don’t have the right skills for the few jobs available. Improving youth employment is now a key goal for policymakers, as it’s essential for Rwanda’s growth and development.
+                    The latest 2024 statistics from NISR indicate that unemployment among youths stands at 16.8%.
+                    This high proportion is indicative of the continued challenges faced by youths in the country upon
+                    transition into the job market. It is brought about principally by a lack of available jobs and the
+                    unavailability of skills that match the few available ones. The greatest portion of the youth is
+                    either underemployed or without the right skills required by current job markets, a situation that
+                    reflects the dire need for reforms in education and skill development to bridge this gap. The issue
+                    now forms a core component of the agenda driving the intervention of policymakers into action
+                    because making sure youth employment improves is key to socio-economic development.
                   </p>
                 </div>
               </div>
@@ -87,14 +94,14 @@ export default function Home() {
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
                 <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
                   <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
-                      OUR SOLUTION
+                    OUR SOLUTION
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                  We aim to reduce youth unemployment by creating opportunities within Rwanda’s tourism sector. Through partnerships with local artisans, guides, and businesses, we will open up jobs in cultural tourism, digital content creation, and sales of authentic Rwandan crafts and souvenirs. Our platform will connect young Rwandans with visitors and buyers interested in Rwandan art and personalized travel experiences, allowing local talents to showcase and sell their work. Additionally, by supporting youth entrepreneurship in tourism, *Xplore Rwanda* will empower young people to turn their cultural knowledge and creativity into sustainable businesses, helping to bridge the gap between skills and job market demands.
+                    We aim to reduce youth unemployment by creating opportunities within Rwanda&apos;s tourism sector. Through partnerships with local artisans, guides, and businesses, we will open up jobs in cultural tourism, digital content creation, and sales of authentic Rwandan crafts and souvenirs. Our platform will connect young Rwandans with visitors and buyers interested in Rwandan art and personalized travel experiences, allowing local talents to showcase and sell their work. Additionally, by supporting youth entrepreneurship in tourism, *Xplore Rwanda* will empower young people to turn their cultural knowledge and creativity into sustainable businesses, helping to bridge the gap between skills and job market demands.
                   </p>
                 </div>
                 <div className="relative min-h-[6rem] w-full grow">
-                 
+
                 </div>
               </div>
               <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]"></div>
@@ -105,13 +112,13 @@ export default function Home() {
 
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
 
-        <h2  className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">Our team</h2>
+        <h2 className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">Our team</h2>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8 mt-16">
           {products.map((product) => (
             <a key={product.id} href={product.href} className="group">
               <div className="aspect-h-1 aspect-w-1 w-full h-[300px] overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                <img
+                <Image
                   alt={product.imageAlt}
                   src={product.imageSrc}
                   className="h-full w-full object-cover object-center  group-hover:opacity-75"
@@ -124,61 +131,61 @@ export default function Home() {
         </div>
       </div>
       <div className="min-h-[100vh] pt-[100px] px-10 bg-[url('../../public/freepik__expand__96022.png')] bg-cover ">
-            <div className="my-8" id="Contact">
-                <div className="text-center mx-auto mb-8 max-w-[510px]">
-                    <h2 className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl ">
-                        Reach out to US
-                    </h2>
-                </div>
-                <div
-                    className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto my-5 max-w-4x bg-transparent backdrop-blur-sm w-[70%] shadow-md rounded-md text-[#333] font-[sans-serif]">
-                    <div>
-                        <h1 className="text-3xl text-[#001446] font-extrabold">CONTACT US</h1>
-                        <p className="text-sm text-[#D55571] mt-3">Have some big idea or brand to develop and need help? Then reach
-                            out we'd love to hear about your project and provide help.</p>
-                        <div className="mt-12">
-                            <h2 className="text-lg font-extrabold">Email</h2>
-                            <ul className="mt-3">
-                                <li className="flex items-center mb-3">
-                                    <div className="bg-[#ffffffcf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                        <FiMail/>
-                                    </div>
-                                    <div className="text-[#000000] text-sm ml-3">
-                                        <small className="block">Mail</small>
-                                        <strong>ideafactory@gmail.com</strong>
-                                    </div>
-                                </li>
-                                <li className="flex items-center mb-3">
-                                    <div className="bg-[#ffffffcf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                        <FiPhone/>
-                                    </div>
-                                    <a target="blank" href="#" className="text-[#000000] text-sm ml-3">
-                                        <small className="block">Phone</small>
-                                        <strong >+250 778 244 211 </strong>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        
+        <div className="my-8" id="Contact">
+          <div className="text-center mx-auto mb-8 max-w-[510px]">
+            <h2 className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl ">
+              Reach out to US
+            </h2>
+          </div>
+          <div
+            className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto my-5 max-w-4x bg-transparent backdrop-blur-sm w-[70%] shadow-md rounded-md text-[#333] font-[sans-serif]">
+            <div>
+              <h1 className="text-3xl text-[#001446] font-extrabold">CONTACT US</h1>
+              <p className="text-sm text-[#D55571] mt-3">Have some big idea or brand to develop and need help? Then reach
+                out we&apos;d love to hear about your project and provide help.</p>
+              <div className="mt-12">
+                <h2 className="text-lg font-extrabold">Email</h2>
+                <ul className="mt-3">
+                  <li className="flex items-center mb-3">
+                    <div className="bg-[#ffffffcf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                      <FiMail />
                     </div>
-                    <form className="contact-form ml-auto space-y-4" >
-                <input type='text' placeholder='Name' id="name"
-                    className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000]" />
-                <input type='email' placeholder='Email' id="email"
-                    className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000]" />
-                <input type='text' placeholder='Subject' id="subject"
-                    className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000]" />
-                <textarea placeholder='Message' rows={6} id="text"
-                    className="w-full rounded-md px-4 border text-sm pt-2.5 outline-[#000000]"></textarea>
-                <input type='submit' value="SEND"
-                    className="text-white bg-[rgb(11,23,53)] hover:bg-white hover:text-black font-semibold rounded-md text-sm px-4 py-2.5 w-full"/>
-            </form>
-                </div>
-                
-            </div>
+                    <div className="text-[#000000] text-sm ml-3">
+                      <small className="block">Mail</small>
+                      <strong>ideafactory@gmail.com</strong>
+                    </div>
+                  </li>
+                  <li className="flex items-center mb-3">
+                    <div className="bg-[#ffffffcf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                      <FiPhone />
+                    </div>
 
+                    <small className="block">Phone</small>
+                    <strong >+250 778 244 211 </strong>
+
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <form className="contact-form ml-auto space-y-4" >
+              <input type='text' placeholder='Name' id="name"
+                className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000]" />
+              <input type='email' placeholder='Email' id="email"
+                className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000]" />
+              <input type='text' placeholder='Subject' id="subject"
+                className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000]" />
+              <textarea placeholder='Message' rows={6} id="text"
+                className="w-full rounded-md px-4 border text-sm pt-2.5 outline-[#000000]"></textarea>
+              <input type='submit' value="SEND"
+                className="text-white bg-[rgb(11,23,53)] hover:bg-white hover:text-black font-semibold rounded-md text-sm px-4 py-2.5 w-full" />
+            </form>
+          </div>
 
         </div>
+
+
+      </div>
 
 
 

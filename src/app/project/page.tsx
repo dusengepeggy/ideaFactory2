@@ -34,7 +34,7 @@ function Projects() {
                 <div className="mt-6 mb-4">
                     <h3 className="font-semibold uppercase tracking-widest text-[#001446] mb-2">Our aim</h3>
                     <p className="text-sm leading-relaxed">
-                    Xplore Rwanda aims to blend technology, culture, and community in a way that transforms tourism into a sustainable, enriching experience, empowering local artisans while offering the world a taste of Rwanda’s beauty.
+                    Xplore Rwanda aims to blend technology, culture, and community in a way that transforms tourism into a sustainable, enriching experience, empowering local artisans while offering the world a taste of Rwanda&apos;s beauty.
                     </p>
                 </div>
                 <hr />
@@ -48,11 +48,11 @@ function Projects() {
                 <div className="mt-6 mb-4">
                     <h3 className="  font-semibold uppercase tracking-widest text-[#001446] mb-2">What we offer</h3>
                     <div className="container  p-6 space-y-8">
-                        {services.map((service, index) => (
-                            <div key={index} >
+                        {services.map((service) => (
+                            <div key={service.name} >
                                 <h2 className="text-2xl font-bold mb-4">{service.name}</h2>
                                 <ul className="space-y-3 text-sm pl-5">
-                                    {Object.entries(service.features).map(([key, feature], i) => (
+                                    {Object.entries(service.features).map(([key, feature]) => (
                                         <li key={key} className="flex items-start">
                                             <span className="text-[#001446] mr-3">•</span>
                                             <p>{feature}</p>
