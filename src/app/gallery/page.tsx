@@ -3,7 +3,6 @@ import Image, { StaticImageData } from 'next/image';
 import React, { useState } from 'react';
 import gallery1 from "../../../public/IMG-20241107-WA0023.jpg";
 import gallery2 from "../../../public/IMG-20241107-WA0024.jpg";
-import gallery3 from "../../../public/IMG-20241107-WA0025.jpg";
 import gallery4 from "../../../public/IMG-20241107-WA0026.jpg";
 import gallery5 from "../../../public/IMG-20241107-WA0027.jpg";
 import gallery6 from "../../../public/IMG-20241107-WA0039.jpg";

@@ -5,6 +5,8 @@ import { FiMail, FiPhone } from "react-icons/fi";
 import Digne from "../../public/digne.jpg"
 import Peggy from "../../public/peggy.jpg"
 import Sam from "../../public/samuel.png"
+import flavia from "../../public/flavia.png"
+import kingley from "../../public/diakite.png"
 import { useState } from "react";
 export default function Home() {
 
@@ -103,7 +105,7 @@ export default function Home() {
       name: 'Kingley Diakite',
       href: 'https://www.instagram.com/kinglydiak/',
       position: 'Content creator',
-      imageSrc: 'https://i.pinimg.com/736x/c2/69/f8/c269f8d60269eedcfd8d93f6540455bf.jpg',
+      imageSrc: kingley,
       imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
     },
     {
@@ -111,7 +113,7 @@ export default function Home() {
       name: 'Flavienne Ihirwe',
       href: 'https://www.instagram.com/fla_via_04/',
       position: 'Researcher',
-      imageSrc: 'https://i.pinimg.com/564x/f9/09/cb/f909cb561c94235ad18b96d7c94409f6.jpg',
+      imageSrc: flavia,
       imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
     },
 
