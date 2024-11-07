@@ -6,8 +6,11 @@ import gallery2 from "../../../public/IMG-20241107-WA0024.jpg";
 import gallery3 from "../../../public/IMG-20241107-WA0025.jpg";
 import gallery4 from "../../../public/IMG-20241107-WA0026.jpg";
 import gallery5 from "../../../public/IMG-20241107-WA0027.jpg";
-import gallery6 from "../../../public/IMG-20241107-WA0028.jpg";
+import gallery6 from "../../../public/IMG-20241107-WA0039.jpg";
 import gallery7 from "../../../public/IMG-20241107-WA0029.jpg";
+import gallery8 from "../../../public/IMG-20241107-WA0039.jpg";
+import g9 from "../../../public/IMG-20241107-WA0050.jpg";
+import g10 from "../../../public/idea.png"
 
 export default function Gallery() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -16,15 +19,15 @@ export default function Gallery() {
   const photos = [
     { url: gallery1, description: "Slay😏😂😂😎" },
     { url: gallery5, description: "We be prototyping😂" },
-    { url: gallery3, description: "Ethiopian tribe 😂😁" },
-    { url: gallery6, description: "Cozy indoor corner" },
-    { url: gallery2, description: "Minimalist flower vase" },
-    { url: gallery6, description: "Misty forest walk" },
-    { url: gallery4, description: "Warm vintage tones" },
-    { url: gallery7, description: "Rooftop sunset glow" },
-    { url:gallery2, description: "Snowy mountain cabin" },
-    { url: gallery3, description: "Latte art coffee" },
-    { url:gallery4, description: "Golden hour serenity" },
+    { url: g9, description: "Meeting Umurava" },
+    { url: gallery6, description: "Working non stop😌" },
+    { url: gallery2, description: "😂😁😂 He be talking non-stop" },
+    { url: gallery8, description: "Our first picture together😂" },
+    { url: gallery4, description: "🎨🖼 Us crafting Our piece😂" },
+    { url: gallery7, description: "Le fille😁😀" },
+    { url:gallery6, description: "🤳😁" },
+    { url: g10, description: "Our logo 😏😏" },
+    { url:gallery4, description: "👀😂😀" },
   ];
 
   const openModal = (photo: { url: StaticImageData, description: string }) => {
