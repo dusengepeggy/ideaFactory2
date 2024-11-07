@@ -1,23 +1,92 @@
+"use client"
 import Image from "next/image";
 import pic from "../../public/idea.png"
 import { FiMail, FiPhone } from "react-icons/fi";
-
+import Digne from "../../public/digne.jpg"
+import Peggy from "../../public/peggy.jpg"
+import Sam from "../../public/samuel.png"
+import { useState } from "react";
 export default function Home() {
-  const products = [
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [isLoading, setIsLoading] = useState(false); // Loading state
+  const [status, setStatus] = useState<string | null>(null); // Status message
+
+  // Validate email format
+  const isValidEmail = (email: string) => /\S+@\S+\.\S+/.test(email);
+
+  // Handle form submission
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const newErrors: { [key: string]: string } = {};
+
+    // Validation checks
+    if (!name.trim()) newErrors.name = 'Name is required';
+    if (!email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!isValidEmail(email)) {
+      newErrors.email = 'Invalid email format';
+    }
+    if (!subject.trim()) newErrors.subject = 'Subject is required';
+    if (!message.trim()) newErrors.message = 'Message is required';
+
+    setErrors(newErrors);
+
+    // If no errors, proceed with API call
+    if (Object.keys(newErrors).length === 0) {
+      setIsLoading(true);
+      setStatus(null);
+
+      try {
+        const response = await fetch('/api/mail', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ from: email, subject, text: message ,name}),
+        });
+
+        if (response.ok) {
+
+          setStatus('Email sent successfully!');
+          setName('');
+          setEmail('');
+          setSubject('');
+          setMessage('');
+          setTimeout(()=>{
+            setStatus('');
+          },6000)
+        } else {
+          const errorData = await response.json();
+          setStatus(`Failed to send email: ${errorData.error || 'Unknown error'}`);
+        }
+      } catch (error) {
+        setStatus('An error occurred. Please try again later.');
+      } finally {
+        setIsLoading(false);
+        
+      }
+    }
+  };
+
+  const ourTeam = [
     {
       id: 1,
       name: 'DUSENGE Peggy',
-      href: '#',
+      href: 'https://www.linkedin.com/in/peggy-dusenge-34a61a299/',
       position: 'Group representative',
-      imageSrc: 'https://i.pinimg.com/564x/f9/09/cb/f909cb561c94235ad18b96d7c94409f6.jpg',
+      imageSrc: Peggy,
       imageAlt: `Peggy's photo`,
     },
     {
       id: 2,
       name: 'Samuel Chima',
-      href: '#',
+      href: 'https://www.linkedin.com/in/samuelchima/',
       position: 'Sub-representative',
-      imageSrc: 'https://i.pinimg.com/736x/c2/69/f8/c269f8d60269eedcfd8d93f6540455bf.jpg',
+      imageSrc: Sam,
       imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
     },
     {
@@ -25,13 +94,13 @@ export default function Home() {
       name: 'Digne Esther',
       href: '#',
       position: 'Researcher',
-      imageSrc: 'https://i.pinimg.com/564x/f9/09/cb/f909cb561c94235ad18b96d7c94409f6.jpg',
+      imageSrc: Digne,
       imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
     },
     {
       id: 4,
       name: 'Kingley Diakite',
-      href: '#',
+      href: 'https://www.instagram.com/kinglydiak/',
       position: 'Content creator',
       imageSrc: 'https://i.pinimg.com/736x/c2/69/f8/c269f8d60269eedcfd8d93f6540455bf.jpg',
       imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
@@ -39,7 +108,7 @@ export default function Home() {
     {
       id: 5,
       name: 'Flavienne Ihirwe',
-      href: '#',
+      href: 'https://www.instagram.com/fla_via_04/',
       position: 'Researcher',
       imageSrc: 'https://i.pinimg.com/564x/f9/09/cb/f909cb561c94235ad18b96d7c94409f6.jpg',
       imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
@@ -56,7 +125,7 @@ export default function Home() {
           <p className=" text-[17px] text-gray-950 self-start pt-4 pl-[40px]">Our <span className="font-extrabold">Mission</span> is to empower young people by fostering growth and success through initiatives that spark creativity, inspire innovation, and help reduce unemployment. We are dedicated to equipping young minds with the skills, tools, and opportunities they need to prosper and build a secure future. Join us in creating a world where every young person has the chance to thrive and make a meaningful impact.</p>
         </div>
         <div className="w-[50%] h-[100%]  overflow-hidden object-cover flex align-middle justify-center pt-[50px]">
-          <Image alt="logo" src={pic} />
+          <Image alt="logo" src={pic} width={600} height={400} />
         </div>
 
 
@@ -115,17 +184,19 @@ export default function Home() {
         <h2 className="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">Our team</h2>
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8 mt-16">
-          {products.map((product) => (
-            <a key={product.id} href={product.href} className="group">
+          {ourTeam.map((member) => (
+            <a key={member.id} href={member.href} target="_blank" className="group">
               <div className="aspect-h-1 aspect-w-1 w-full h-[300px] overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                 <Image
-                  alt={product.imageAlt}
-                  src={product.imageSrc}
+                  alt={member.imageAlt}
+                  src={member.imageSrc}
+                  width={400}
+                  height={400}
                   className="h-full w-full object-cover object-center  group-hover:opacity-75"
                 />
               </div>
-              <h3 className="mt-4 text-lg font-medium text-gray-900 ">{product.name}</h3>
-              <p className="mt-1 text-sm text-gray-700">{product.position}</p>
+              <h3 className="mt-4 text-lg font-medium text-gray-900 ">{member.name}</h3>
+              <p className="mt-1 text-sm text-gray-700">{member.position}</p>
             </a>
           ))}
         </div>
@@ -168,17 +239,59 @@ export default function Home() {
               </div>
 
             </div>
-            <form className="contact-form ml-auto space-y-4" >
-              <input type='text' placeholder='Name' id="name"
-                className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000]" />
-              <input type='email' placeholder='Email' id="email"
-                className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000]" />
-              <input type='text' placeholder='Subject' id="subject"
-                className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000]" />
-              <textarea placeholder='Message' rows={6} id="text"
-                className="w-full rounded-md px-4 border text-sm pt-2.5 outline-[#000000]"></textarea>
-              <input type='submit' value="SEND"
-                className="text-white bg-[rgb(11,23,53)] hover:bg-white hover:text-black font-semibold rounded-md text-sm px-4 py-2.5 w-full" />
+            <form className="contact-form ml-auto space-y-4 w-[100%]" onSubmit={handleSubmit} >
+              <input
+                type="text"
+                placeholder="Name"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className={`w-full min-w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000] ${errors.name ? 'border-red-500' : ''}`}
+              />
+              {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+
+              <input
+                type="email"
+                placeholder="Email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className={`w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000] ${errors.email ? 'border-red-500' : ''}`}
+              />
+              {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+
+              <input
+                type="text"
+                placeholder="Subject"
+                id="subject"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+                className={`w-full rounded-md py-2.5 px-4 border text-sm outline-[#000000] ${errors.subject ? 'border-red-500 w-full' : ''}`}
+              />
+              {errors.subject && <p className="text-red-500 text-sm">{errors.subject}</p>}
+
+              <textarea
+                placeholder="Message"
+                rows={6}
+                id="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className={`w-full rounded-md px-4 border text-sm pt-2.5 outline-[#000000] ${errors.message ? 'border-red-500' : ''}`}
+              ></textarea>
+              {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="text-white bg-[rgb(11,23,53)] hover:bg-white hover:text-black font-semibold rounded-md text-sm px-4 py-2.5 w-full"
+              >
+                {isLoading ? 'Sending...' : 'SEND'}
+              </button>
+
+              {/* Status message */}
+              {status && <p className={`text-sm ${status.includes('successfully') ? 'text-green-500' : 'text-red-500'}`}>{status}</p>}
+
+
             </form>
           </div>
 
