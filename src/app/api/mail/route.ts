@@ -1,12 +1,5 @@
-
-import { Html } from 'next/document';
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-
-interface ResponseData {
-  message: string;
-  error?: string;
-}
 
 export  async function POST(
   req: NextRequest,

@@ -65,6 +65,7 @@ export default function Home() {
         }
       } catch (error) {
         setStatus('An error occurred. Please try again later.');
+        console.log(error)
       } finally {
         setIsLoading(false);
         
