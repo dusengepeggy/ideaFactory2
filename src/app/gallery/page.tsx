@@ -1,7 +1,7 @@
 "use client"
 import Image, { StaticImageData } from 'next/image';
 import React, { useState } from 'react';
-import gallery1 from "../../../public/IMG-20241107-WA0023.jpg";
+import gallery1 from "../../../public/proto.png";
 import gallery2 from "../../../public/IMG-20241107-WA0024.jpg";
 import gallery4 from "../../../public/IMG-20241107-WA0026.jpg";
 import gallery5 from "../../../public/IMG-20241107-WA0027.jpg";
@@ -16,8 +16,8 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<{ url:StaticImageData , description: string } | null>(null);
 
   const photos = [
-    { url: gallery1, description: "Slay😏😂😂😎" },
     { url: gallery5, description: "We be prototyping😂" },
+    { url: gallery1, description: "The prototype😏😂😂😎" },
     { url: g9, description: "Meeting Umurava" },
     { url: gallery6, description: "Working non stop😌" },
     { url: gallery2, description: "😂😁😂 He be talking non-stop" },

@@ -1,5 +1,5 @@
 import React from 'react'
-import demo from '../../../public/projectdemo.jpg'
+import demo from '../../../public/proto.png'
 import Image from 'next/image'
 function Projects() {
 

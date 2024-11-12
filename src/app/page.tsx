@@ -6,7 +6,7 @@ import Digne from "../../public/digne.jpg"
 import Peggy from "../../public/peggy.jpg"
 import Sam from "../../public/samuel.png"
 import flavia from "../../public/flavia.png"
-import kingley from "../../public/diakite.png"
+import kingley from "../../public/kingley.png"
 import { useState } from "react";
 export default function Home() {
 
@@ -104,7 +104,7 @@ export default function Home() {
       id: 4,
       name: 'Kingley Diakite',
       href: 'https://www.instagram.com/kinglydiak/',
-      position: 'Content creator',
+      position: 'Executive Content creator',
       imageSrc: kingley,
       imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
     },
