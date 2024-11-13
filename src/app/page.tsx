@@ -5,7 +5,7 @@ import { FiMail, FiPhone } from "react-icons/fi";
 import Digne from "../../public/digne.jpg"
 import Peggy from "../../public/peggy.jpg"
 import Sam from "../../public/samuel.png"
-import flavia from "../../public/flavia.png"
+import flavia from "../../public/fla.jpg"
 import kingley from "../../public/kingley.png"
 import { useState } from "react";
 export default function Home() {
