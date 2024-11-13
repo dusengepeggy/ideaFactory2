@@ -7,9 +7,10 @@ import gallery4 from "../../../public/IMG-20241107-WA0026.jpg";
 import gallery5 from "../../../public/IMG-20241107-WA0027.jpg";
 import gallery6 from "../../../public/IMG-20241107-WA0039.jpg";
 import gallery7 from "../../../public/IMG-20241107-WA0029.jpg";
-import gallery8 from "../../../public/IMG-20241107-WA0039.jpg";
+import gallery8 from "../../../public/kids.png";
 import g9 from "../../../public/IMG-20241107-WA0050.jpg";
 import g10 from "../../../public/idea.png"
+import g11 from "../../../public/kids2.png"
 
 export default function Gallery() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -21,8 +22,8 @@ export default function Gallery() {
     { url: g9, description: "Meeting Umurava" },
     { url: gallery6, description: "Working non stop😌" },
     { url: gallery2, description: "😂😁😂 He be talking non-stop" },
-    { url: gallery8, description: "Our first picture together😂" },
-    { url: gallery4, description: "🎨🖼 Us crafting Our piece😂" },
+    { url: gallery8, description: "Who knew teaching would be fun" },
+    { url: g11, description: "#Teacher 😂😂😂😂" },
     { url: gallery7, description: "Le fille😁😀" },
     { url:gallery6, description: "🤳😁" },
     { url: g10, description: "Our logo 😏😏" },

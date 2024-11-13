@@ -95,7 +95,7 @@ export default function Home() {
     {
       id: 3,
       name: 'Digne Esther',
-      href: '#',
+      href: 'https://www.instagram.com/digneestrellah/',
       position: 'Researcher',
       imageSrc: Digne,
       imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
@@ -215,8 +215,7 @@ export default function Home() {
             className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto my-5 max-w-4x bg-transparent backdrop-blur-sm w-[70%] shadow-md rounded-md text-[#333] font-[sans-serif]">
             <div>
               <h1 className="text-3xl text-[#001446] font-extrabold">CONTACT US</h1>
-              <p className="text-sm text-[#D55571] mt-3">Have some big idea or brand to develop and need help? Then reach
-                out we&apos;d love to hear about your project and provide help.</p>
+              <p className="text-sm text-[#D55571] mt-3">Have any enquiries about us or what we do? Reach out to us so that we can talk</p>
               <div className="mt-12">
                 <h2 className="text-lg font-extrabold">Email</h2>
                 <ul className="mt-3">
